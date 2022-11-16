@@ -5,19 +5,30 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PadrecomicComponent } from './components/padrecomic/padrecomic.component';
 import { HijocomicComponent } from './components/hijocomic/hijocomic.component';
+import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ComicsinyeccionComponent } from './components/comicsinyeccion/comicsinyeccion.component';
+import { ComicsService } from './services/comics.service';
+import {HttpClientModule} from '@angular/common/http';
+import { PersonasapiComponent } from './components/personasapi/personasapi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadrecomicComponent,
-    HijocomicComponent
+    HijocomicComponent,
+    HomeComponent,
+    MenuComponent,
+    ComicsinyeccionComponent,
+    PersonasapiComponent
   ],
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, ComicsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
