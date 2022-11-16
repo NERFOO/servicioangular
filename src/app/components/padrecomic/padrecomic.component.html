@@ -1,0 +1,21 @@
+<div>
+    <h1>Padre comic</h1>
+    <hr/>
+    <div *ngIf="comicFavorito">
+        <img src="{{comicFavorito.imagen}}" alt="foto" style="width: 150px; height: 150px;">
+    </div>
+    <hr/>
+    <form #Form="ngForm" (ngSubmit)="insertarComic()">
+        <label>Titulo</label>
+        <input type="text" name="cajatitulo" #cajatitulo><br/>
+        <label>Imagen</label>
+        <input type="text" name="cajaimagen" #cajaimagen><br/>
+        <label>Descripcion</label>
+        <input type="text" name="cajadescripcion" #cajadescripcion><br/>
+        <button style="background-color: green; color:white">Insertar comic</button>
+    </form>
+    <hr/>
+    <div *ngFor="let comic of arrayComics; let i = index">
+        <app-hijocomic [comic]="comic" [index]="i" (modificarComic)="modificarComic($event)" (eliminarComic)="eliminarComic($event)" (seleccionarFavorito)="seleccionarFavorito($event)"></app-hijocomic>
+    </div>
+</div>
