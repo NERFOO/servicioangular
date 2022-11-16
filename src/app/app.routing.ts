@@ -1,9 +1,9 @@
 import { Routes, RouterModule } from "@angular/router";
 import { ModuleWithProviders } from "@angular/core";
-import { HomeComponent } from "./app/components/home/home.component";
-import { PadrecomicComponent } from "./app/components/padrecomic/padrecomic.component";
-import { ComicsinyeccionComponent } from "./app/components/comicsinyeccion/comicsinyeccion.component";
-import { PersonasapiComponent } from "./app/components/personasapi/personasapi.component";
+import { HomeComponent } from "./components/home/home.component";
+import { PadrecomicComponent } from "./components/padrecomic/padrecomic.component";
+import { ComicsinyeccionComponent } from "./components/comicsinyeccion/comicsinyeccion.component";
+import { PersonasapiComponent } from "./components/personasapi/personasapi.component";
 
 const appRoutes : Routes = [
     {path : "" , component : HomeComponent},

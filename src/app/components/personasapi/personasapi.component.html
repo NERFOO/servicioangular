@@ -1,1 +1,20 @@
-<p>personasapi works!</p>
+<div style="width: 80%; margin: auto;">
+    <table class="table table-striped" border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let persona of personas">
+                <td>{{persona.IdPersona}}</td>
+                <td>{{persona.Nombre}}</td>
+                <td>{{persona.Email}}</td>
+                <td>{{persona.Edad}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

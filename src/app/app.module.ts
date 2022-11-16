@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { routing, appRoutingProviders } from 'src/app.routing';
+import { routing, appRoutingProviders } from 'src/app/app.routing';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PadrecomicComponent } from './components/padrecomic/padrecomic.component';
@@ -11,6 +11,7 @@ import { ComicsinyeccionComponent } from './components/comicsinyeccion/comicsiny
 import { ComicsService } from './services/comics.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PersonasapiComponent } from './components/personasapi/personasapi.component';
+import { PersonasService } from './services/personas.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { PersonasapiComponent } from './components/personasapi/personasapi.compo
     FormsModule,
     HttpClientModule
   ],
-  providers: [appRoutingProviders, ComicsService],
+  providers: [appRoutingProviders, ComicsService, PersonasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
