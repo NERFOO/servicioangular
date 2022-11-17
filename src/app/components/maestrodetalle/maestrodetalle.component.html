@@ -1,0 +1,25 @@
+<div style="width: 80%; margin: auto;">
+    <h1>Maestro detalle Empleados Routing</h1>
+
+    <hr/>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Oficio</th>
+                <th>Salario</th>
+                <th>Departamento</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empleados">
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.oficio}}</td>
+                <td>{{emp.salario}}</td>
+                <td>{{emp.departamento}}</td>
+                <td><a [routerLink]="['/detalleempleado', emp.idEmpleado]" class="btn btn-success">Detalles</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

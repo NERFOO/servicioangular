@@ -14,9 +14,15 @@ export class PlantillamultipleComponent implements OnInit {
   constructor(private _service : PlantillasService) { }
 
   @ViewChild("cajaselect") cajaSelect! : ElementRef;
+
   getPlantillaId() : void {
-    var funcion = this.cajaSelect.nativeElement.value;
-    this._service.getPlantillaFuncion(funcion).subscribe( res => {
+    var seleccionados = new Array<string>();
+    for(var option of this.cajaSelect.nativeElement.options) {
+      if(option.selected == true) {
+        seleccionados.push(option.value);
+      }
+    }
+    this._service.getPlantillaFuncionesArray(seleccionados).subscribe( res => {
       this.funcion = res;
     })
   }

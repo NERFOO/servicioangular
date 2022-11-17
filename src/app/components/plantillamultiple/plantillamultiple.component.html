@@ -3,10 +3,10 @@
 
     <form #plantillaForm="ngForm">
         <label>Selecciona la funcion</label>
-        <select name="cajaselect" #cajaselect class="form-select" multiple (click)="getSeleccionMultiple(cajaselect.value)">
+        <select name="cajaselect" #cajaselect class="form-select" multiple>
             <option *ngFor="let fun of funciones">{{fun}}</option>
         </select>
-        <button class="btn btn-info">Buscar funcion</button>
+        <button class="btn btn-info" (click)="getPlantillaId()">Buscar funcion</button>
     </form>
     <hr/>
     <table class="table table-striped" *ngIf="funcion">

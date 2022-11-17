@@ -34,4 +34,11 @@ export class EmpleadosService {
 
         return this._http.get(url);
     }
+
+    getEmpleadosId(id : string): Observable<any> {
+        var request = "/api/empleados/" + id;
+        var url = environment.urlEmpleados + request;
+
+        return this._http.get(url);
+    }
 }

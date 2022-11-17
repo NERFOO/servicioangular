@@ -8,6 +8,8 @@ import { EmpleadossalarioComponent } from "./components/empleadossalario/emplead
 import { EmpleadosoficioComponent } from "./components/empleadosoficio/empleadosoficio.component";
 import { PlantillaComponent } from "./components/plantilla/plantilla.component";
 import { PlantillamultipleComponent } from "./components/plantillamultiple/plantillamultiple.component";
+import { MaestrodetalleComponent } from "./components/maestrodetalle/maestrodetalle.component";
+import { DetalleempleadoComponent } from "./components/detalleempleado/detalleempleado.component";
 
 const appRoutes : Routes = [
     {path : "" , component : HomeComponent},
@@ -18,6 +20,8 @@ const appRoutes : Routes = [
     {path : "empleadosoficio" , component : EmpleadosoficioComponent},
     {path : "plantilla" , component : PlantillaComponent},
     {path : "plantillamultiple" , component : PlantillamultipleComponent},
+    {path : "maestrodetalle" , component : MaestrodetalleComponent},
+    {path : "detalleempleado/:id" , component : DetalleempleadoComponent},
 ];
 
 export const appRoutingProviders : any[] = [];

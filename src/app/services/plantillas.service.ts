@@ -21,8 +21,15 @@ export class PlantillasService {
         return this._http.get(url);
     }
 
-    getPlantillaFuncionesArray(peticion : void) : Observable<any> {
-        var request = "/api/plantilla/plantillaFunciones/" + peticion;
+    getPlantillaFuncionesArray(funciones : any) : Observable<any> {
+        var data = "";
+        for(var funcion of funciones) {
+            data += "funcion=" + funcion + "&";
+        }
+        data = data.substring(0, data.length -1);
+        console.log(data)
+
+        var request = "/api/plantilla/plantillaFunciones?" + data;
         var url = environment.urlPlantilla + request;
 
         return this._http.get(url);

@@ -18,6 +18,8 @@ import { EmpleadosoficioComponent } from './components/empleadosoficio/empleados
 import { PlantillaComponent } from './components/plantilla/plantilla.component';
 import { PlantillasService } from './services/plantillas.service';
 import { PlantillamultipleComponent } from './components/plantillamultiple/plantillamultiple.component';
+import { MaestrodetalleComponent } from './components/maestrodetalle/maestrodetalle.component';
+import { DetalleempleadoComponent } from './components/detalleempleado/detalleempleado.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { PlantillamultipleComponent } from './components/plantillamultiple/plant
     EmpleadossalarioComponent,
     EmpleadosoficioComponent,
     PlantillaComponent,
-    PlantillamultipleComponent
+    PlantillamultipleComponent,
+    MaestrodetalleComponent,
+    DetalleempleadoComponent
   ],
   imports: [
     BrowserModule,
