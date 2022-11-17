@@ -1,0 +1,28 @@
+<div style="width: 80%; margin: auto;">
+    <h1>Empleados oficio</h1>
+
+    <form #empleadosForm="ngForm">
+        <label>Seleccione un oficio</label>
+        <select name="selectoficio" #selectoficio class="form-select">
+            <option *ngFor="let oficio of oficios">{{oficio}}</option>
+        </select>
+        <button class="btn btn-info" (click)="buscarEmpleados()">Buscar oficio</button>
+    </form>
+    <hr/>
+    <table class="table table-striped" *ngIf="empleados">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Oficio</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empleados">
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.oficio}}</td>
+                <td>{{emp.salario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

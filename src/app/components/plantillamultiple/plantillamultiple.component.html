@@ -1,0 +1,28 @@
+<div>
+    <h1>Plantilla Hospitales Multiple</h1>
+
+    <form #plantillaForm="ngForm">
+        <label>Selecciona la funcion</label>
+        <select name="cajaselect" #cajaselect class="form-select" multiple (click)="getSeleccionMultiple(cajaselect.value)">
+            <option *ngFor="let fun of funciones">{{fun}}</option>
+        </select>
+        <button class="btn btn-info">Buscar funcion</button>
+    </form>
+    <hr/>
+    <table class="table table-striped" *ngIf="funcion">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Funcion</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fun of funcion">
+                <td>{{fun.apellido}}</td>
+                <td>{{fun.funcion}}</td>
+                <td>{{fun.salario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
