@@ -3,10 +3,10 @@
 
     <button [routerLink]="['/maestrodetalle']" class="btn btn-info">Volver al listado</button>
 
-    <div *ngFor="let emp of empleado">
-        <h2>Apellido: {{emp.apellido}}</h2>
-        <h2>Oficio: {{emp.oficio}}</h2>
-        <h2>Salario: {{emp.salario}}</h2>
-        <h2>Departamento: {{emp.departamento}}</h2>
+    <div *ngIf="empleado">
+        <h2>Apellido: {{empleado.apellido}}</h2>
+        <h2>Oficio: {{empleado.oficio}}</h2>
+        <h2>Salario: {{empleado.salario}}</h2>
+        <h2>Departamento: {{empleado.departamento}}</h2>
     </div>
 </div>
